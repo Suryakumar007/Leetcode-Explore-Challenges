@@ -1,0 +1,31 @@
+class Solution {
+    public void moveZeroes(int[] a) 
+    {
+        int zeroes=0;
+        int n=a.length;
+        int j=0;
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]==0)
+            {
+                zeroes++;
+            }
+        }
+        
+        if(zeroes>0)
+        {
+            for(int i=0;i<n;i++)
+            {
+                if(a[i]!=0)
+                {
+                    a[j++]=a[i];
+                }
+            }
+            
+            for(int i=j;i<n;i++)
+            {
+                a[i]=0;
+            }
+        }
+    }
+}
